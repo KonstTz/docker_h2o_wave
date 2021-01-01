@@ -6,7 +6,7 @@ page = site['/hello']
 # Add a markdown card to the page.
 page['quote'] = ui.markdown_card(
     box='1 1 2 2',
-    title='Hello World',
+    title='Hello World - Cool',
     content='"The Internet? Is that thing still around?" - *Lisa Simpson*',
 )
 
