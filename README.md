@@ -1,7 +1,31 @@
-# wave
+# Docker for h2o wave
 
-docker run -t -i -p 10101:10101 -v "$(pwd)/code":/graphs 48c0b5f8d8e1
+A Docker image for [H2O Wave](https://h2oai.github.io/wave/)
 
-docker exec -d efd6a0b941e6 python3 /graphs/test.py
+## Requirements
 
-docker run -t -i -p 10101:10101 ef6c151e5f20
+- Docker
+
+- docker-compose
+
+## Usage
+
+Build image.
+
+```console
+docker-compose build
+```
+
+Start Wave Server
+
+```console
+docker-compose up -d
+```
+
+Run python code to update the page (`test.py` for example)
+
+```console
+$ docker exec -d wave python3 /code/test.py
+```
+
+ Navigate to http://localhost:10101/hello in order to see the results of the script 

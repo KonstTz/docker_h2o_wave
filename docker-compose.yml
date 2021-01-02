@@ -1,14 +1,15 @@
-version: "1.0"
+version: '3'
+
 services:
-  web:
-    build: .
+
+  wave:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - WAVE_VERSION=0.10.0
+    container_name: wave
+    volumes:
+      - ./code:/code
     ports:
       - "10101:10101"
-    volumes:
-      - ./data:/var/data
-    links:
-      - 3.10.0a3-slim-buster
-  debian:
-    image: 3.10.0a3-slim-buster
-volumes:
-  logvolume01: {}
