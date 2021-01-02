@@ -28,4 +28,6 @@ Run python code to update the page (`test.py` for example)
 $ docker exec -d wave python3 /code/test.py
 ```
 
- Navigate to http://localhost:10101/hello in order to see the results of the script 
+Navigate to http://localhost:10101/hello in order to see the results of the script 
+
+![Example](https://raw.githubusercontent.com/KonstTz/docker_h2o_wave/main/screens/test.png)
